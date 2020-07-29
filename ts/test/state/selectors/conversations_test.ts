@@ -20,7 +20,7 @@ describe('state/selectors/conversations', () => {
           inboxPosition: 0,
           phoneNumber: 'notused',
           isArchived: false,
-
+          isMarkedUnread: false,
           type: 'direct',
           isMe: false,
           lastUpdated: Date.now(),
@@ -40,7 +40,7 @@ describe('state/selectors/conversations', () => {
           inboxPosition: 21,
           phoneNumber: 'notused',
           isArchived: false,
-
+          isMarkedUnread: false,
           type: 'direct',
           isMe: false,
           lastUpdated: Date.now(),
@@ -60,7 +60,7 @@ describe('state/selectors/conversations', () => {
           inboxPosition: 22,
           phoneNumber: 'notused',
           isArchived: false,
-
+          isMarkedUnread: false,
           type: 'direct',
           isMe: false,
           lastUpdated: Date.now(),
@@ -80,7 +80,7 @@ describe('state/selectors/conversations', () => {
           inboxPosition: 20,
           phoneNumber: 'notused',
           isArchived: false,
-
+          isMarkedUnread: false,
           type: 'direct',
           isMe: false,
           lastUpdated: Date.now(),
@@ -100,7 +100,7 @@ describe('state/selectors/conversations', () => {
           inboxPosition: 30,
           phoneNumber: 'notused',
           isArchived: false,
-
+          isMarkedUnread: false,
           type: 'direct',
           isMe: false,
           lastUpdated: Date.now(),

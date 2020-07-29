@@ -45,7 +45,6 @@
     "dev:grunt": "yarn grunt dev",
     "dev:webpack": "NODE_ENV=development webpack-dev-server --hot",
     "dev:typed-scss": "yarn build:typed-scss -w",
-    "dev:storybook": "SIGNAL_ENV=storybook start-storybook -p 6006 -s ./",
     "build": "run-s --print-label build:grunt build:typed-scss build:webpack build:release build:zip",
     "build:dev": "run-s --print-label build:grunt build:typed-scss build:webpack",
     "build:grunt": "yarn grunt",

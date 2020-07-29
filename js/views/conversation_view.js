@@ -335,6 +335,8 @@
         this.unload('windows closed');
       });
 
+      this.model.setUnread(false);
+
       this.setupHeader();
       this.setupTimeline();
       this.setupCompositionArea({ attachmentListEl: attachmentListEl[0] });
@@ -424,6 +426,9 @@
               Whisper.ConversationUnarchivedToast,
               document.body
             );
+          },
+          onMarkUnread: () => {
+            this.model.setUnread(true);
           },
         };
       };

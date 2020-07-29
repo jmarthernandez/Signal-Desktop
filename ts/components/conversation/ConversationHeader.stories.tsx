@@ -42,6 +42,7 @@ const actionProps: PropsActions = {
 
   onArchive: action('onArchive'),
   onMoveToInbox: action('onMoveToInbox'),
+  onMarkUnread: () => {},
 };
 
 const housekeepingProps: PropsHousekeeping = {

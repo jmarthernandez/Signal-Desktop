@@ -22,6 +22,7 @@ export type PropsData = {
 
   lastUpdated: number;
   unreadCount: number;
+  isMarkedUnread: boolean;
   isSelected: boolean;
 
   draftPreview?: string;
@@ -75,12 +76,12 @@ export class ConversationListItem extends React.PureComponent<Props> {
   }
 
   public renderUnread() {
-    const { unreadCount } = this.props;
+    const { unreadCount, isMarkedUnread } = this.props;
 
-    if (unreadCount > 0) {
+    if (unreadCount > 0 || isMarkedUnread) {
       return (
         <div className="module-conversation-list-item__unread-count">
-          {unreadCount}
+          {unreadCount || ''}
         </div>
       );
     }

@@ -25,6 +25,7 @@ export type ConversationType = {
   id: string;
   name?: string;
   isArchived: boolean;
+  isMarkedUnread: boolean;
   activeAt?: number;
   timestamp: number;
   inboxPosition: number;

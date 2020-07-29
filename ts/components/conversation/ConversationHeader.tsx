@@ -45,6 +45,7 @@ export interface PropsActions {
   onShowSafetyNumber: () => void;
   onShowAllMedia: () => void;
   onShowGroupMembers: () => void;
+  onMarkUnread: () => void;
   onGoBack: () => void;
 
   onArchive: () => void;
@@ -234,6 +235,7 @@ export class ConversationHeader extends React.Component<Props> {
       onShowSafetyNumber,
       onArchive,
       onMoveToInbox,
+      onMarkUnread,
       timerOptions,
     } = this.props;
 
@@ -256,6 +258,7 @@ export class ConversationHeader extends React.Component<Props> {
           </SubMenu>
         )}
         <MenuItem onClick={onShowAllMedia}>{i18n('viewRecentMedia')}</MenuItem>
+        <MenuItem onClick={onMarkUnread}>{'Mark as unread'}</MenuItem>
         {isGroup ? (
           <MenuItem onClick={onShowGroupMembers}>
             {i18n('showMembers')}

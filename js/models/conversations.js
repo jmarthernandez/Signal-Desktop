@@ -395,6 +395,7 @@
         id: this.id,
 
         isArchived: this.get('isArchived'),
+        isMarkedUnread: this.get('isMarkedUnread'),
         activeAt: this.get('active_at'),
         avatarPath: this.getAvatarPath(),
         color,
@@ -1537,6 +1538,12 @@
     async setArchived(isArchived) {
       this.set({ isArchived });
       window.Signal.Data.updateConversation(this.attributes);
+    },
+
+    async setUnread(isMarkedUnread) {
+      // optimistically mark as unread
+      this.set({ isMarkedUnread });
+      // window.Signal.Data.updateConversation(this.attributes);
     },
 
     async updateExpirationTimer(
